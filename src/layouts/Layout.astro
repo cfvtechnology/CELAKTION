@@ -1,22 +1,198 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+const { title } = Astro.props;
+import Footer from "./Footer.astro";
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <header
+      id="main-header"
+      class="fixed w-full top-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-sm:py-2 sm:py-2">
+        <div class="flex justify-between items-center md:py-4">
+          <div class="flex items-center space-x-4">
+            <img
+              src="https://res.cloudinary.com/cflores/image/upload/v1742361606/VIAX/CELAKTION/Logo_Viax_bqecww.png"
+              alt="Logo"
+              class="h-15 max-sm:h-10 sm:h-12"
+            />
+          </div>
+
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#Hero"
+              class="text-white hover:text-orange-500 transition-colors duration-200"
+              >INICIO</a
+            >
+            <a
+              href="#SectionDescription"
+              class="text-white hover:text-orange-500 transition-colors duration-200"
+              >SOBRE EL EVENTO</a
+            >
+            <a
+              href="#SectionPlans"
+              class="text-white hover:text-orange-500 transition-colors duration-200"
+              >PATROCINADORES</a
+            >
+            <a
+              href="#SectionTestimonials"
+              class="text-white hover:text-orange-500 transition-colors duration-200"
+              >TESTIMONIOS</a
+            >
+            <a
+              href="#SectionTeam"
+              class="text-white hover:text-orange-500 transition-colors duration-200"
+              >PARTICIPANTES</a
+            >
+          </nav>
+
+          <!-- Mobile menu button -->
+          <button id="menu-button" class="md:hidden text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="menu-icon"
+              class="h-6 w-6 transition-transform duration-200"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu (hidden by default) -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-2 space-y-1">
+            <a
+              href="#Hero"
+              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+              >INICIO</a
+            >
+            <a
+              href="#SectionDescription"
+              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+              >SOBRE EL EVENTO</a
+            >
+            <a
+              href="#SectionPlans"
+              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+              >PATROCINADORES</a
+            >
+            <a
+              href="#SectionTestimonials"
+              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+              >TESTIMONIOS</a
+            >
+            <a
+              href="#SectionTeam"
+              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+              >PARTICIPANTES</a
+            >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script>
+      import "/src/scripts/keen-slider.js";
+
+      const header = document.getElementById("main-header");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuButton = document.getElementById("menu-button");
+      const menuIcon = document.getElementById("menu-icon");
+      const navLinks = document.querySelectorAll("nav a");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      // Detectar scroll y cambiar el color del header
+      window.addEventListener("scroll", () => {
+        if (header) {
+          if (window.scrollY > 50) {
+            header.classList.add("bg-orange-500");
+            navLinks.forEach((link) => {
+              link.classList.add("hover:text-gray-900");
+            });
+            mobileLinks.forEach((link) => {
+              link.classList.add("hover:bg-gray-900");
+            });
+
+            header.classList.remove("text-gray-900");
+            navLinks.forEach((link) => {
+              link.classList.remove("hover:text-orange-500");
+            });
+            mobileLinks.forEach((link) => {
+              link.classList.remove("hover:bg-orange-500");
+            });
+
+          } else {
+            header.classList.remove("bg-orange-500");
+            header.classList.add("bg-gray-900");
+            navLinks.forEach((link) =>
+              link.classList.remove("hover:text-gray-900"),
+            );
+            navLinks.forEach((link) =>
+              link.classList.add("hover:text-orange-500"),
+            );
+            mobileLinks.forEach((link) => {
+              link.classList.add("hover:bg-orange-500");
+            });
+          }
+        }
+      });
+
+      // Toggle menú móvil con cambio de icono
+      if (menuButton) {
+        menuButton.addEventListener("click", () => {
+          if (mobileMenu) {
+            mobileMenu.classList.toggle("hidden");
+
+            // Cambiar el icono
+            if (!mobileMenu.classList.contains("hidden")) {
+              if (menuIcon) {
+                menuIcon.innerHTML =
+                  '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+              }
+            } else {
+              if (menuIcon) {
+                menuIcon.innerHTML =
+                  '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+              }
+            }
+          }
+        });
+      }
+
+      // Cerrar menú al hacer clic en una opción
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (mobileMenu) {
+            mobileMenu.classList.add("hidden");
+          }
+          if (menuIcon) {
+            menuIcon.innerHTML =
+              '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+---
+const Sponsors = [
+    {
+        title: "Patrocinador",
+        level: "Bronce",
+        styleLevel: "mt-2 text-5xl font-semibold tracking-tight text-gray-900",
+        descripcion:
+            "Contribución: Apoyo en especie (alimentos, kits básicos o pequeñas contribuciones económicas).",
+        styleDescription: "mt-6 text-gray-600",
+        benefits: [
+            "Mención en agradecimientos en redes sociales.",
+            "Reconocimiento especial.",
+        ],
+        styleBenefits: "mt-8 space-y-3 text-sm text-gray-600 sm:mt-10",
+        botonText: "Súmate",
+        styleDiv:
+            "rounded-3xl rounded-t-3xl bg-white/90 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl",
+        styleBoton:
+            "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-orange-900 ring-1 ring-orange-900 ring-inset hover:ring-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10",
+        link: "#",
+    },
+    {
+        title: "Patrocinador Principal",
+        level: "Oro",
+        styleLevel: "mt-2 text-5xl font-semibold tracking-tight text-white",
+        descripcion:
+            "Contribución: Donación económica o provisión de recursos clave (equipo de montaña, transporte, alimentación).",
+        styleDescription: "mt-6 text-base/7",
+        benefits: [
+            "Logo destacado en todo el material publicitario (flyers, videos, fotografías).",
+            "Mención especial como patrocinador principal en redes sociales y eventos comunitarios.",
+            "Inclusión en videos promocionales como socio oficial.",
+            "Reconocimiento especial.",
+        ],
+        styleBenefits: "mt-8 space-y-3 text-sm/6 sm:mt-10",
+        botonText: "Transforma",
+        styleDiv:
+            "relative rounded-3xl bg-yellow-600 p-8 ring-1 shadow-2xl ring-gray-900/10 sm:p-10",
+        styleBoton:
+            "mt-8 block rounded-md bg-orange-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10",
+        link: "#",
+    },
+    {
+        title: "Patrocinador",
+        level: "Plata",
+        styleLevel: "mt-2 text-5xl font-semibold tracking-tight text-gray-900",
+        descripcion:
+            "Contribución: Apoyo económico o donación de servicios (hospedaje, insumos médicos, bebidas energéticas).",
+        styleDescription: "mt-6 text-gray-600",
+        benefits: [
+            "Logo visible en flyers y redes sociales.",
+            "Mención en publicaciones relacionadas con el área comunitaria.",
+            "Reconocimiento especial.",
+        ],
+        styleBenefits: "mt-8 space-y-3 text-sm text-gray-600 sm:mt-10",
+        botonText: "Impulsa",
+        styleDiv:
+            "rounded-3xl rounded-t-3xl bg-white/90 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-t-none sm:p-10 lg:mx-0 lg:rounded-bl-none lg:rounded-tr-3xl",
+        styleBoton:
+            "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-orange-900 ring-1 ring-orange-900 ring-inset hover:ring-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10",
+        link: "#",
+    },
+];
+
+const logos = [
+    "https://res.cloudinary.com/cflores/image/upload/v1742449889/VIAX/CELAKTION/GSL_ziuxio.svg",
+    "https://res.cloudinary.com/cflores/image/upload/v1742450118/VIAX/CELAKTION/MaWI_bzew16.svg",
+    "https://res.cloudinary.com/cflores/image/upload/v1742450118/VIAX/CELAKTION/Leon_oenjro.svg",
+    "https://res.cloudinary.com/cflores/image/upload/v1742450894/VIAX/CELAKTION/Doc_s9h31f.svg",
+    "https://res.cloudinary.com/cflores/image/upload/v1742449889/VIAX/CELAKTION/gym_xypyzh.svg",
+];
+---
+
+<div
+    class="relative isolate bg-gray-900 px-6 pt-24 pb-8 sm:py-10 lg:px-8 lg:pt-35"
+>
+    <div
+        class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
+        aria-hidden="true"
+    >
+        <div
+            class="mx-auto aspect-1155/678 w-[72.1875rem] bg-linear-to-tr from-[#F27405] to-[#F2A30F] opacity-30"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        >
+        </div>
+    </div>
+
+    <div class="mx-auto max-w-4xl text-center">
+        <span
+            class="inline-flex items-center rounded-md bg-orange-200 px-2 py-1 text-xs font-medium text-orange-500 ring-1 ring-purple-700/10 ring-inset"
+            >NIVELES DE PATROCINIO</span
+        >
+        <h2
+            class="mt-2 text-5xl font-semibold tracking-tight text-balanc sm:text-6xl"
+        >
+            SÉ UN PATROCINADOR Y ALCANZA NUEVAS ALTURAS
+        </h2>
+        <p class="mt-6 inline-flex items-center prose invert">
+            Tu marca puede hacer historia junto a CELAKTION. Conviértete en
+            patrocinador y obtén visibilidad en un evento único, mientras apoyas
+            una noble causa.
+        </p>
+    </div>
+
+    <div
+        class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-6xl lg:grid-cols-3"
+    >
+        {
+            Sponsors.map((Sponsor, index) => (
+                <div class={`${Sponsor.styleDiv}`} data-key={index}>
+                    <h3 class="text-base/7 font-semibold text-orange-900">
+                        {Sponsor.title}
+                    </h3>
+                    <p class={`${Sponsor.styleLevel}`}>{Sponsor.level}</p>
+                    <p class={`${Sponsor.styleDescription}`}>
+                        {Sponsor.descripcion}
+                    </p>
+                    <ul class={`${Sponsor.styleBenefits}`}>
+                        {Sponsor.benefits.map((benefit, i) => (
+                            <li class="flex gap-x-3" data-key={i}>
+                                <svg
+                                    class="h-6 w-5 flex-none text-orange-900"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                {benefit}
+                            </li>
+                        ))}
+                    </ul>
+                    <a href={`${Sponsor.link}`} class={`${Sponsor.styleBoton}`}>
+                        {Sponsor.botonText}
+                    </a>
+                </div>
+            ))
+        }
+    </div>
+    
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
+        <!-- Logos de patrocinadores -->
+        <div
+            class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 max-sm:grid-cols-3 sm:max-w-2xl sm:grid-cols-4 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
+        >
+            {
+                logos.map((logo, index) => (
+                    <img
+                        class="max-h-15 w-full object-contain"
+                        src={logo}
+                        alt="Patrocinador"
+                        data-key={index}
+                        width="158"
+                        height="48"
+                    />
+                ))
+            }
+        </div>
+
+        <div class="relative text-center mt-12">
+            <!-- Título Principal -->
+            <h2
+                class="text-4xl max-sm:text-2xl font-extrabold tracking-wide bg-gradient-to-r from-orange-400 to-yellow-300 text-transparent bg-clip-text drop-shadow-lg"
+            >
+                ELLOS YA SON PARTE DE LA HISTORIA 🚀
+            </h2>
+            <!-- Efecto de reflejo corregido -->
+            <h2
+                class="text-4xl max-sm:text-2xl font-extrabold tracking-wide text-gray-400 opacity-60 blur-sm mt-1 transform scale-y-100"
+            >
+                ELLOS YA SON PARTE DE LA HISTORIA 🚀
+            </h2>
+        </div>
+    </div>
+</div>

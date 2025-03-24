@@ -1,0 +1,73 @@
+---
+const teamMembers = [
+    {
+        name: "DOUGLAS GARCÍA",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/14_uaacqf.png",
+    },
+    {
+        name: "NARDIN GUTIÉRREZ",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742765608/VIAX/CELAKTION/Team/13_eou1xd.png",
+    },
+    { name: "CARLOS NOÉ", image: "https://res.cloudinary.com/cflores/image/upload/v1742765608/VIAX/CELAKTION/Team/12_mlxled.png" },
+    {
+        name: "ABRAHAM GONZÁLEZ",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742765608/VIAX/CELAKTION/Team/11_fr5cby.png",
+    },
+    { name: "ADONAY VALLE", image: "https://res.cloudinary.com/cflores/image/upload/v1742765608/VIAX/CELAKTION/Team/10_bny0r6.png" },
+    { name: "WILDER PORTILLO", image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/4_zqd76v.png" },
+    { name: "KELYN CHAVEZ", image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/8_jrzvln.png" },
+    { name: "JUAN ESCAMILLA", image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/9_hidqsj.png" },
+    { name: "BRYAN BLANCO", image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/15_swfple.png" },
+    { name: "ANGIE WAIKIRIA", image: "https://res.cloudinary.com/cflores/image/upload/v1742765608/VIAX/CELAKTION/Team/1_wexvqv.png" },
+    { name: "LAURA ESCAMILLA", image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/7_e9guon.png" },
+    { name: "DAYANA ROMERO", image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/6_qprad3.png" },
+    { name: "AMNER JEHU", image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/3_fucmfy.png" },
+    {
+        name: "ESTEPHANY MADRID",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/5_rsehbs.png",
+    },
+    { name: "ELVIS MIRANDA", image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/2_io1vtw.png" },
+];
+---
+
+<div class="relative overflow-hidden">
+    <!-- Fondo con gradiente -->
+    <div
+        class="absolute inset-0 bg-gradient-to-b from-gray-900 via-orange-500 to-gray-900 opacity-60"
+    >
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="relative z-10 container mx-auto px-4 py-12 max-sm:pt-18 lg:pb-30 lg:pt-30 text-center">
+        <h1 class="text-5xl font-semibold tracking-tight text-balanc sm:text-6xl">
+            NUESTRA COMUNIDAD DE AVENTUREROS 🏔️
+        </h1>
+        <p class="text-xl md:text-2xl text-white mt-2">
+            <span class="font-light">"Un</span>
+            <span class="font-bold"> desafío </span>
+            <span class="font-light">por una acción</span>
+            <span class="font-bold"> comunitaria</span>
+            <span class="font-light">"</span>
+        </p>
+
+        <!-- Grid de equipo -->
+        <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto mt-8"
+        >
+            {
+                teamMembers.map((member, index) => (
+                    <div class="flex flex-col items-center">
+                        <div class="relative w-30 h-35 max-sm:w-40 max-sm:h-45 md:w-30 md:h-35 lg:w-40 lg:h-45 ">
+                            <img
+                                src={member.image}
+                                alt={member.name}
+                                class="w-full h-full object-fill"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</div>

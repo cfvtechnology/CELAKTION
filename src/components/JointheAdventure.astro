@@ -1,0 +1,87 @@
+---
+const benefits = [
+    "Donaciones para las actividades Community.",
+    "⁠Aportaciones en efectivo o transferencias.",
+    "Insumos como regalos, piñatas, dulces o útiles escolares.",
+    "Compartir nuestra visión en redes sociales."
+];
+---
+
+<div class="bg-gray-900">
+    <div class="mx-auto max-w-7xl py-10 sm:px-6 sm:py-10 lg:px-0">
+        <div
+            class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 max-sm:pt-5 shadow-2xl sm:rounded-3xl sm:px-2 md:pt-24 lg:flex lg:gap-x-20 lg:px-8 lg:pt-0"
+        >
+            <svg
+                viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                aria-hidden="true"
+            >
+                <circle
+                    cx="512"
+                    cy="512"
+                    r="512"
+                    fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                    fill-opacity="0.7"></circle>
+                <defs>
+                    <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+            <div
+                class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-10 lg:text-left sm:text-left sm:max-w-none lg:max-w-md sm:px-2 prose invert"
+            >
+                <h2
+                    class="text-5xl font-semibold tracking-tight text-balanc sm:text-6xl"
+                >
+                    ÚNETE A LA AVENTURA
+                </h2>
+                <p class="">
+                    Sé parte de este desafío único y genera un impacto real en
+                    la sociedad. Contáctanos para más información sobre cómo
+                    contribuir.
+                </p>
+                <ul class="mt-8 space-y-3 text-base sm:mt-10">
+                    {
+                        benefits.map((benefit, i) => (
+                            <li class="flex gap-x-3" data-key={i}>
+                                <svg
+                                    class="h-6 w-5 flex-none text-orange-900"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                {benefit}
+                            </li>
+                        ))
+                    }
+                </ul>
+                <div
+                    class="flex items-center justify-center gap-x-6 lg:justify-start sm:justify-start"
+                >
+                    <a
+                        href="#"
+                        class="rounded-md text-white bg-yellow-600 px-3.5 py-3 mt-3 text-sm font-semibold shadow-xs hover:bg-yellow-700 hover:scale-105 hover:shadow-lg invert"
+                        >Quiero contribuir</a
+                    >
+                </div>
+            </div>
+            <div class="relative mt-16 h-80 lg:mt-8 sm:h-130">
+                <img
+                    class="absolute top-0 left-0 w-[47rem] max-w-none max-sm:w-[30rem] rounded-md bg-white/5 ring-1 ring-white/10"
+                    src="https://res.cloudinary.com/cflores/image/upload/v1742578208/VIAX/CELAKTION/nsitvahwicauhqmgn9ww.jpg"
+                    alt="App screenshot"
+                    width="1824"
+                    height="1080"
+                />
+            </div>
+        </div>
+    </div>
+</div>

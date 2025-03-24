@@ -1,0 +1,68 @@
+---
+interface Props {
+  videoUrl: string;
+  Title: string;
+  Subtitle: string;
+}
+
+const { videoUrl, Title, Subtitle} = Astro.props;
+---
+
+<section id="Hero" class="relative h-screen">
+  <div class="relative z-10 flex flex-col justify-center items-start h-full px-8 max-w-7xl mx-auto prose prose-invert">
+    <h1 class="text-3xl md:text-5xl font-bold text-white mb-5" set:html={Title}/>
+    <p class="text-xl text-gray-200 mb-8 max-w-lg" set:html={Subtitle}/>
+    <button id="unmute-btn" 
+    class="absolute bg-orange-500 text-white max-sm:text-sm px-6 py-3 lg:mt-5 md:mt-5 rounded-full flex items-center gap-2 transition-all ease-in-out transform" 
+    style="top: 13%; left: 50%; transform: translate(-50%, -50%);">
+    🔊 Activar Sonido
+    <span id="indicator" class="w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
+  </button>
+  </div>
+  <div class="absolute inset-0">
+    <video id="hero-video" autoplay muted class="w-full h-full object-cover">
+      <source src={videoUrl} type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
+    </video>
+  </div>
+  <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+</section>
+
+<!-- Script para mover el botón gradualmente hacia la esquina inferior derecha -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("hero-video") as HTMLVideoElement;
+    const unmuteBtn = document.getElementById("unmute-btn");
+    const nextSection = document.getElementById("SectionDescription");
+
+    if (unmuteBtn && video) {
+      unmuteBtn.addEventListener("click", () => {
+        video.muted = false; // 🔊 Desactivar mute
+        video.play(); // ▶️ Reproducir nuevamente con sonido
+
+        // Ocultar el botón e indicador después de activar el sonido
+        unmuteBtn.style.display = "none";
+      });
+    }
+    // 🔹 Mover a la siguiente sección cuando termine el video
+    setTimeout(() => {
+      if (!nextSection) {
+        console.warn("La sección con ID " + nextSection + " no fue encontrada.");
+      }
+    }, 1000); // Esperar 1 segundo antes de verificar
+
+    if (video) {
+      video.addEventListener("ended", () => {
+        setTimeout(() => {
+          const nextSectionId = nextSection ? nextSection.id : null;
+          const section = nextSectionId ? document.getElementById(nextSectionId) : null;
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          } else {
+            console.warn("No se encontró la sección con ID " + nextSectionId);
+          }
+        }, 500);
+      });
+    }
+  });
+</script>

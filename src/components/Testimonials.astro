@@ -1,0 +1,134 @@
+---
+const testimonials = [
+    {
+        name: "Bryan Blanco",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742791635/VIAX/CELAKTION/Testimonios/Brayan_pivuxc.jpg",
+        text: "Llegué con el propósito de apoyar este proyecto, que busca ayudar a los niños, compartir el amor de Dios y llevar momentos de alegría a las comunidades. Cada sonrisa genuina de los niños nos llena de satisfacción. Es una experiencia tan hermosa que termina transformando a cada voluntario.",
+    },
+    {
+        name: "Wilder Portillo",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742791635/VIAX/CELAKTION/Testimonios/Wilder_wjwnpe.jpg",
+        text: "Para construir el futuro, Dios nos ha dado el presente. Edifiquemos juntos, desde hoy, el porvenir que anhelamos.",
+    },
+    {
+        name: "Keylin Zelaya",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742791635/VIAX/CELAKTION/Testimonios/Keylin_cnhuap.jpg",
+        text: "Ser voluntario es una oportunidad para compartir amor y transformar vidas. Ayudar no solo cambia a quienes reciben apoyo, sino también a quienes lo brindan.",
+    },
+    {
+        name: "Katherine Rodríguez",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742791635/VIAX/CELAKTION/Testimonios/Katherine_wes2rf.jpg",
+        text: "La verdadera razón por la que nace en nosotros el deseo de ayudar a los demás es el profundo agradecimiento que sentimos hacia Dios, pues al servir a los demás, estamos sirviendo a Cristo Jesús.",
+    },
+    {
+        name: "Nardin Gutiérrez",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742791635/VIAX/CELAKTION/Testimonios/Nardin_v1xl0t.jpg",
+        text: "Ayudar a los demás con amor, incluso en pequeñas acciones, tiene el poder de cambiar el mundo, marcar la diferencia y motivar a otros a hacer lo mismo. Cada gesto de solidaridad siembra esperanza y genera un impacto que trasciende, demostrando que, juntos, podemos construir un mundo mejor.",
+    },
+    {
+        name: "Carlos Flores",
+        image: "https://res.cloudinary.com/cflores/image/upload/v1742791636/VIAX/CELAKTION/Testimonios/Carlos_e9p7ko.jpg",
+        text: "Si vives con pasión por servir a Dios y al prójimo, tendrás la motivación suficiente para dar lo mejor de ti.",
+    },
+];
+const stars = Array.from({ length: 5 });
+
+
+---
+
+    <div class="mx-auto max-w-screen-xl px-8 py-20 prose lg:pt-30">
+        <h2
+            class="text-5xl font-semibold tracking-tight text-balanc sm:text-6xl invert sm:px-3"
+        >
+            TESTIMONIOS
+        </h2>
+
+        <div class="mt-8">
+            <div id="keen-slider" class="keen-slider">
+                {
+                    testimonials.map((t) => (
+                        <div class="keen-slider__slide transition-opacity duration-500">
+                            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+                                <div class="flex items-center gap-4">
+                                    <img
+                                        alt=""
+                                        src={t.image}
+                                        class="size-14 rounded-full object-cover"
+                                    />
+
+                                    <div>
+                                        <div class="flex justify-center gap-0.5 text-orange-900">
+                                            {stars.map(() => (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="size-5"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            ))}
+                                        </div>
+
+                                        <p class="mt-0.5 text-lg font-medium text-gray-900">
+                                            {t.name}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="mt-4 text-base/7">{t.text}</p>
+                            </blockquote>
+                        </div>
+                    ))
+                }
+            </div>
+
+            <div class="mt-6 flex items-center justify-center gap-4 text-white">
+                <button
+                    aria-label="Previous slide"
+                    id="keen-slider-previous"
+                    class="transition-colors hover:text-yellow-600"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-5"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+                    </svg>
+                </button>
+
+                <p class="w-16 text-center text-sm">
+                    <span id="keen-slider-active"></span>
+                    /
+                    <span id="keen-slider-count"></span>
+                </p>
+
+                <button
+                    aria-label="Next slide"
+                    id="keen-slider-next"
+                    class="transition-colors hover:text-yellow-600"
+                >
+                    <svg
+                        class="size-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M9 5l7 7-7 7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>

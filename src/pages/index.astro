@@ -1,11 +1,46 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/global.css';
+import HeroVideo from '../components/HeroVideo.astro';  
+import PlansLevel from "../components/PlansLevel.astro";
+import DescriptionCelaktion from "../components/DescriptionCelaktion.astro";
+import DescriptionCelaktionv2 from "../components/DescriptionCelaktionv2.astro";
+import JointheAdventure from '../components/JointheAdventure.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Team from '../components/Team.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="CELAKTION - ">
+
+  <!-- Hero Section -->
+<HeroVideo 
+Title=''
+Subtitle=''
+videoUrl="https://res.cloudinary.com/cflores/video/upload/v1742334253/VIAX/CELAKTION/video-celaktion_oc9pnl.mp4" />
+
+  <!-- About Event -->
+<section id="SectionDescription">
+  <DescriptionCelaktion />
+</section>
+
+<section id="SectionPlans">
+  <PlansLevel />
+</section>
+
+<section id="SectionDescriptionv2">
+  <DescriptionCelaktionv2/>
+</section>
+
+<section id="SectionJoin">
+  <JointheAdventure />
+</section>
+
+<section id="SectionTestimonials" class="bg-gray-900">
+  <Testimonials />
+</section>
+
+<section id="SectionTeam">
+  <Team />
+</section>
+
 </Layout>
