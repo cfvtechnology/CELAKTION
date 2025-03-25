@@ -1,5 +1,11 @@
 ---
-const { title } = Astro.props;
+const siteTitle = "CELAKTION | Desafía la montaña y supera tus límites";
+const siteDescription =
+  "CELAKTION es el desafío de aventura extrema que te lleva a la cima mientras apoyas una causa social. Únete ahora y forma parte de esta expedición única.";
+const siteUrl = "https://viaxhn.com/celektion";
+const siteImage = "https://res.cloudinary.com/cflores/image/upload/v1742854382/VIAX/CELAKTION/VIAXHN-banner_sljqwf.jpg";
+const siteKeywords =
+  "aventura, desafío, montaña, expedición, reto extremo, turismo sostenible, voluntariado, CELAKTION";
 import Footer from "./Footer.astro";
 ---
 
@@ -8,8 +14,28 @@ import Footer from "./Footer.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
+    <title>{siteTitle}</title>
+
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content={siteDescription} />
+    <meta name="keywords" content={siteKeywords} />
+    <meta name="author" content="CFV Technology" />
+
+    <!-- Open Graph (Para redes sociales) -->
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:image" content={siteImage} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={siteImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/cflores/image/upload/v1742924851/VIAX/CELAKTION/Favicon_Viax_gifnnh.png" />
   </head>
   <body class="bg-gray-900 text-gray-100">
     <!-- Navigation -->
@@ -22,7 +48,8 @@ import Footer from "./Footer.astro";
           <div class="flex items-center space-x-4">
             <img
               src="https://res.cloudinary.com/cflores/image/upload/v1742361606/VIAX/CELAKTION/Logo_Viax_bqecww.png"
-              alt="Logo"
+              alt="VIAX Logo"
+              loading="lazy"
               class="h-15 max-sm:h-10 sm:h-12"
             />
           </div>
@@ -78,31 +105,31 @@ import Footer from "./Footer.astro";
       <!-- Mobile menu (hidden by default) -->
       <div id="mobile-menu" class="md:hidden hidden">
         <div class="px-2 pt-2 pb-2 space-y-1">
-            <a
-              href="#Hero"
-              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
-              >INICIO</a
-            >
-            <a
-              href="#SectionDescription"
-              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
-              >SOBRE EL EVENTO</a
-            >
-            <a
-              href="#SectionPlans"
-              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
-              >PATROCINADORES</a
-            >
-            <a
-              href="#SectionTestimonials"
-              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
-              >TESTIMONIOS</a
-            >
-            <a
-              href="#SectionTeam"
-              class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
-              >PARTICIPANTES</a
-            >
+          <a
+            href="#Hero"
+            class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+            >INICIO</a
+          >
+          <a
+            href="#SectionDescription"
+            class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+            >SOBRE EL EVENTO</a
+          >
+          <a
+            href="#SectionPlans"
+            class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+            >PATROCINADORES</a
+          >
+          <a
+            href="#SectionTestimonials"
+            class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+            >TESTIMONIOS</a
+          >
+          <a
+            href="#SectionTeam"
+            class="block px-3 py-2 text-white hover:bg-orange-500 rounded-md mobile-link"
+            >PARTICIPANTES</a
+          >
         </div>
       </div>
     </header>
@@ -142,7 +169,6 @@ import Footer from "./Footer.astro";
             mobileLinks.forEach((link) => {
               link.classList.remove("hover:bg-orange-500");
             });
-
           } else {
             header.classList.remove("bg-orange-500");
             header.classList.add("bg-gray-900");
