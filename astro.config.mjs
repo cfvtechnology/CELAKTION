@@ -8,4 +8,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+  site: 'https://viaxhn.com/celaktion',
+  base: '/celaktion',
+  output: 'static', 
 });

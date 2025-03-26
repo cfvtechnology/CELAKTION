@@ -5,6 +5,8 @@ const benefits = [
     "Insumos como regalos, piñatas, dulces o útiles escolares.",
     "Compartir nuestra visión en redes sociales."
 ];
+
+const volunteer = import.meta.env.PUBLIC_VOLUNTARIADO_URL;
 ---
 
 <div class="bg-gray-900">
@@ -67,8 +69,8 @@ const benefits = [
                     class="flex items-center justify-center gap-x-6 lg:justify-start sm:justify-start"
                 >
                     <a
-                        href="#"
-                        class="rounded-md text-white bg-yellow-600 px-3.5 py-3 mt-3 text-sm font-semibold shadow-xs hover:bg-yellow-700 hover:scale-105 hover:shadow-lg invert"
+                        href=`${volunteer}`
+                        class="rounded-md target='_blank' text-white bg-yellow-600 px-3.5 py-3 mt-3 text-sm font-semibold shadow-xs hover:bg-yellow-700 hover:scale-105 hover:shadow-lg invert"
                         >Quiero contribuir</a
                     >
                 </div>

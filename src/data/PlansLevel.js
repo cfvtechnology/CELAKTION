@@ -15,8 +15,8 @@ export const Sponsors = [
         styleDiv:
             "rounded-3xl rounded-t-3xl bg-white/90 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl",
         styleBoton:
-            "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-orange-900 ring-1 ring-orange-900 ring-inset hover:ring-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10",
-        link: "#",
+            "mt-8 block target='_blank' rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-orange-900 ring-1 ring-orange-900 ring-inset hover:ring-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10",
+        link: `${import.meta.env.PUBLIC_PLAN_BRONCE_URL}`,
     },
     {
         title: "Patrocinador Principal",
@@ -36,8 +36,8 @@ export const Sponsors = [
         styleDiv:
             "relative rounded-3xl bg-yellow-600 p-8 ring-1 shadow-2xl ring-gray-900/10 sm:p-10",
         styleBoton:
-            "mt-8 block rounded-md bg-orange-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10",
-        link: "#",
+            "mt-8 block target='_blank' rounded-md bg-orange-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10",
+        link: `${import.meta.env.PUBLIC_PLAN_ORO_URL}`,
     },
     {
         title: "Patrocinador",
@@ -56,8 +56,8 @@ export const Sponsors = [
         styleDiv:
             "rounded-3xl rounded-t-3xl bg-white/90 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-t-none sm:p-10 lg:mx-0 lg:rounded-bl-none lg:rounded-tr-3xl",
         styleBoton:
-            "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-orange-900 ring-1 ring-orange-900 ring-inset hover:ring-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10",
-        link: "",
+            "mt-8 block target='_blank' rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-orange-900 ring-1 ring-orange-900 ring-inset hover:ring-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10",
+        link: `${import.meta.env.PUBLIC_PLAN_PLATA_URL}`,
     },
 ];
 
@@ -81,5 +81,9 @@ export const logos = [
     {
         src: "https://res.cloudinary.com/cflores/image/upload/v1742449889/VIAX/CELAKTION/gym_xypyzh.svg",
         alt: "MAX Fitness - Centro de entrenamiento oficial apoyando la expedición de CELAKTION",
+    },
+    {
+        src: "https://res.cloudinary.com/cflores/image/upload/v1742965404/VIAX/CELAKTION/Constructora_Gonzales_u31zqv.svg",
+        alt: "Constructura Gonzales - Empresa Patrocinadora de CELAKTION",
     },
 ];
