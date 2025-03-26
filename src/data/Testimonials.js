@@ -7,7 +7,7 @@ export const testimonials = [
     {
         name: "Wilder Portillo",
         image: "https://res.cloudinary.com/cflores/image/upload/v1742791635/VIAX/CELAKTION/Testimonios/Wilder_wjwnpe.jpg",
-        text: "Para export construir el futuro, Dios nos ha dado el presente. Edifiquemos juntos, desde hoy, el porvenir que anhelamos.",
+        text: "Para construir el futuro, Dios nos ha dado el presente. Edifiquemos juntos, desde hoy, el porvenir que anhelamos.",
     },
     {
         name: "Keylin Zelaya",
@@ -22,7 +22,7 @@ export const testimonials = [
     {
         name: "Nardin Gutiérrez",
         image: "https://res.cloudinary.com/cflores/image/upload/v1742791635/VIAX/CELAKTION/Testimonios/Nardin_v1xl0t.jpg",
-        text: "Ayudar a los demás con amor, incluso en pequeñas acciones, tiene el poder de cambiar el mundo, marcar la diferencia y motivar a otros a hacer lo mismo. Cada gesto de solidaridad siembra esperanza y genera un impacto que trasciende, demostrando que, juntos, podemos export construir un mundo mejor.",
+        text: "Ayudar a los demás con amor, incluso en pequeñas acciones, tiene el poder de cambiar el mundo, marcar la diferencia y motivar a otros a hacer lo mismo. Cada gesto de solidaridad siembra esperanza y genera un impacto que trasciende, demostrando que, juntos, podemos construir un mundo mejor.",
     },
     {
         name: "Carlos Flores",
