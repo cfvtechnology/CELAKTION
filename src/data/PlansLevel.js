@@ -63,12 +63,16 @@ export const Sponsors = [
 
 export const logos = [
     {
-        src: "https://res.cloudinary.com/cflores/image/upload/v1742449889/VIAX/CELAKTION/GSL_ziuxio.svg",
-        alt: "GSL - Empresa patrocinadora oficial de CELAKTION",
+        src: "https://res.cloudinary.com/cflores/image/upload/v1743024960/VIAX/CELAKTION/CFV_Technology_xuvs3y.svg",
+        alt: "CFV Technology - Empresa aliada en el desafío de CELAKTION",
     },
     {
         src: "https://res.cloudinary.com/cflores/image/upload/v1742450118/VIAX/CELAKTION/MaWI_bzew16.svg",
         alt: "MaWI - Patrocinador comprometido con la aventura y el desafío",
+    },
+    {
+        src: "https://res.cloudinary.com/cflores/image/upload/v1742449889/VIAX/CELAKTION/GSL_ziuxio.svg",
+        alt: "GSL - Empresa patrocinadora oficial de CELAKTION",
     },
     {
         src: "https://res.cloudinary.com/cflores/image/upload/v1742450118/VIAX/CELAKTION/Leon_oenjro.svg",
@@ -79,11 +83,11 @@ export const logos = [
         alt: "Doc - Empresa patrocinadora de CELAKTION, apoyando la expedición",
     },
     {
-        src: "https://res.cloudinary.com/cflores/image/upload/v1742449889/VIAX/CELAKTION/gym_xypyzh.svg",
-        alt: "MAX Fitness - Centro de entrenamiento oficial apoyando la expedición de CELAKTION",
-    },
-    {
         src: "https://res.cloudinary.com/cflores/image/upload/v1742965404/VIAX/CELAKTION/Constructora_Gonzales_u31zqv.svg",
         alt: "Constructura Gonzales - Empresa Patrocinadora de CELAKTION",
+    },
+    {
+        src: "https://res.cloudinary.com/cflores/image/upload/v1742449889/VIAX/CELAKTION/gym_xypyzh.svg",
+        alt: "MAX Fitness - Centro de entrenamiento oficial apoyando la expedición de CELAKTION",
     },
 ];
