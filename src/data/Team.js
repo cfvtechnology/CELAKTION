@@ -26,4 +26,5 @@ export const teamMembers = [
         image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/5_rsehbs.png",
     },
     { name: "ELVIS MIRANDA - Voluntario para el reto de CELAKTION", image: "https://res.cloudinary.com/cflores/image/upload/v1742765607/VIAX/CELAKTION/Team/2_io1vtw.png" },
+    { name: "DARLAN GONZALES - Voluntario para el reto de CELAKTION", image: "https://res.cloudinary.com/cflores/image/upload/v1743523414/VIAX/CELAKTION/Team/16_1_mfhrlq.png" },
 ];
