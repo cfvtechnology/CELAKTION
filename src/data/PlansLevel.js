@@ -98,6 +98,13 @@ export const logos = [
         src: "https://res.cloudinary.com/cflores/image/upload/v1742965404/VIAX/CELAKTION/Constructora_Gonzales_u31zqv.svg",
         alt: "Constructura Gonzales - Empresa Patrocinadora de CELAKTION",
     },
-
+    {
+        src: "https://res.cloudinary.com/cflores/image/upload/v1743575884/VIAX/CELAKTION/Graciano_Bronce_z1hcnt.svg",
+        alt: "El Graciano Hostal - Patrocinador Bronce de CELAKTION",
+    }, 
+    {
+        src: "https://res.cloudinary.com/cflores/image/upload/v1743575867/VIAX/CELAKTION/Reto_Celaque_Plata_l1y0si.svg",
+        alt: "Reto Celaque - Patrocinador Plata de CELAKTION",
+    },
 
 ];
