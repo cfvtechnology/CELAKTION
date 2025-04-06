@@ -63,12 +63,13 @@ export const Sponsors = [
 
 export const logos = [
     {
-        src: "https://res.cloudinary.com/cflores/image/upload/v1743024960/VIAX/CELAKTION/CFV_Technology_xuvs3y.svg",
-        alt: "CFV Technology - Empresa aliada en el desafío de CELAKTION",
-    },
-    {
         src: "https://res.cloudinary.com/cflores/image/upload/v1743519498/VIAX/CELAKTION/CentPro_ORO_yf1qog.svg",
         alt: "CentPro - Patrocinador Oro de CELAKTION, apoyando la expedición",
+        class: "col-span-2 md:col-span-2 bg-gray-800/50 rounded-lg p-8 flex items-center justify-center"
+    },
+    {
+        src: "https://res.cloudinary.com/cflores/image/upload/v1743024960/VIAX/CELAKTION/CFV_Technology_xuvs3y.svg",
+        alt: "CFV Technology - Empresa aliada en el desafío de CELAKTION",
     },
     {
         src: "https://res.cloudinary.com/cflores/image/upload/v1742450118/VIAX/CELAKTION/MaWI_bzew16.svg",
