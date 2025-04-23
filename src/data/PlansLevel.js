@@ -107,5 +107,14 @@ export const logos = [
         src: "https://res.cloudinary.com/cflores/image/upload/v1743575867/VIAX/CELAKTION/Reto_Celaque_Plata_l1y0si.svg",
         alt: "Reto Celaque - Patrocinador Plata de CELAKTION",
     },
+    {
+        src: "https://res.cloudinary.com/cflores/image/upload/v1745420228/VIAX/CELAKTION/zldmshzzckjvldpadloq.svg",
+        alt: "Enfermera Maryini Castillo - Patrocinador Bronce de CELAKTION",
+    },
+    {
+        src: "https://res.cloudinary.com/cflores/image/upload/v1745420228/VIAX/CELAKTION/ttr5cfsyvnrrjkvcewby.svg",
+        alt: "Blanco Arte & Diseño - Patrocinador Plata de CELAKTION",
+        class: "col-span-2 md:col-span-2 bg-gray-800/50 rounded-lg p-8 flex items-center justify-center"
+    },
 
 ];
