@@ -7,11 +7,11 @@ export const Sponsors = [
             "Contribución: Apoyo en especie (alimentos, kits básicos o pequeñas contribuciones económicas).",
         styleDescription: "mt-6 text-gray-600",
         benefits: [
-            "Mención en agradecimientos en redes sociales.",
+            "Mención en agradecimientos en redes sociales (Facebook, Instagram, LinkedIn y Tiktok).",
             "Reconocimiento especial.",
         ],
         styleBenefits: "mt-8 space-y-3 text-sm text-gray-600 sm:mt-10",
-        botonText: "Súmate",
+        botonText: "Súmate"
         styleDiv:
             "rounded-3xl rounded-t-3xl bg-white/90 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl",
         styleBoton:
